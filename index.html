@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azaami Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">A</div>
+        <div>
+          <p class="brand-name">Azaami</p>
+          <span class="brand-tag">Shopping app</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Deals</a>
+        <a href="#">Categories</a>
+        <a href="#">Support</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="search">
+          <span>⌕</span>
+        </button>
+        <button class="icon-btn cart-toggle" aria-label="cart">
+          <span>🛒</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">New Arrivals</p>
+          <h1>Shop everything in one place</h1>
+          <p>
+            Fashion, gadgets, home essentials, and much more — all at great prices.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn">Shop Now</button>
+            <button class="secondary-btn">Explore Deals</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="floating-card card-one">
+            <span>Live Deals</span>
+            <strong>Up to 50% OFF</strong>
+          </div>
+          <div class="floating-card card-two">
+            <span>Fast Delivery</span>
+            <strong>2-4 Days</strong>
+          </div>
+          <div class="product-spotlight">
+            <div class="spotlight-emoji">📦</div>
+            <div>
+              <p>Best Seller</p>
+              <h3>Smart Watch</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="text" placeholder="Search products..." />
+        </div>
+
+        <div id="categoryFilters" class="category-filters" aria-label="Category filters"></div>
+      </section>
+
+      <section class="container">
+        <div class="section-head">
+          <h2>Featured Products</h2>
+          <button class="text-btn">View All</button>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+    </main>
+
+    <aside id="cartDrawer" class="cart-drawer">
+      <div class="drawer-header">
+        <h3>Your Cart</h3>
+        <button id="closeCart" class="close-btn">✕</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div>
+          <span>Subtotal</span>
+          <strong id="subtotal">₹0</strong>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </aside>
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
